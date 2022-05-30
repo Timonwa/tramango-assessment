@@ -36,6 +36,7 @@
       .hero__image,
       .hero__description {
         width: 50%;
+        height: 100%;
         padding: 30px;
         position: relative;
         min-height: 380px;
@@ -70,7 +71,6 @@
         padding: 10px 20px;
         border-radius: 5px;
         margin-bottom: 20px;
-        width: 150px;
       }
       button.hero__buttons-support {
         background-color: #fc6109;
@@ -123,9 +123,28 @@
       }
 
       /* media queries */
+      @media screen and (min-width: 1440px) {
+        body {
+          margin: 40px 150px;
+        }
+        .hero__image {
+          width: 30%;
+        }
+        .hero__description {
+          width: 70%;
+        }
+      }
       @media screen and (max-width: 960px) {
         body {
           margin: 40px 60px;
+        }
+      }
+      @media screen and (max-width: 850px) {
+        .hero__buttons > button {
+          width: 150px;
+        }
+        .hero__image > img {
+          height: 450px;
         }
       }
       @media screen and (max-width: 768px) {
