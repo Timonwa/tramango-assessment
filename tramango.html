@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tramango Test</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+      body {
+        background-color: #f8f8f8;
+        color: #4d4442;
+        margin: 50px 100px;
+      }
+
+      /* hero section */
+      header {
+        margin-bottom: 120px;
+      }
+      .hero-section {
+        background-color: #ffede3;
+      }
+      .hero-wrapper {
+        display: flex;
+      }
+      .hero__image,
+      .hero__description {
+        width: 50%;
+        padding: 30px;
+        position: relative;
+        min-height: 380px;
+      }
+      .hero__image > img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 25px;
+        position: absolute;
+        left: -10px;
+      }
+      .hero__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .hero__description > h1 {
+        margin-bottom: 30px;
+      }
+      .hero__description > p {
+        margin-bottom: 30px;
+        font-size: 1.3rem;
+      }
+      .hero__buttons > button {
+        margin-right: 30px;
+        background-color: transparent;
+        border: 2px solid #fc6109;
+        max-width: 150px;
+        color: #fc6109;
+        font-weight: 500;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        width: 150px;
+      }
+      button.hero__buttons-support {
+        background-color: #fc6109;
+        color: white;
+      }
+
+      /* section heading */
+      .section-heading {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      aside {
+        margin-bottom: 60px;
+      }
+
+      /* faq section */
+      .faq-body {
+        background-color: #fff;
+      }
+      .accordion__item {
+        border-bottom: 1px solid #f8f5f3;
+      }
+      .accordion__item:last-child {
+        border-bottom: none;
+      }
+      .accordion__item-header h3 {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #5a5b5d;
+      }
+      .accordion__item-header-icon {
+        transform: rotate(0deg);
+        transition: transform 0.3s;
+      }
+      .accordion__item-content {
+        border-top: 1px solid #f8f5f3;
+        padding: 20px;
+        display: none;
+      }
+
+      /* active states */
+      .toggle-icon {
+        transform: rotate(180deg);
+      }
+      .active-accordion {
+        display: block;
+      }
+
+      /* media queries */
+      @media screen and (max-width: 960px) {
+        body {
+          margin: 40px 60px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        body {
+          margin: 40px;
+        }
+        header {
+          margin-bottom: 60px;
+        }
+        /* hero section */
+        .hero__image {
+          display: none;
+        }
+        .hero__description {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        body {
+          margin: 40px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!--* hero section -->
+      <header class="hero-section">
+        <div class="hero-wrapper">
+          <div class="hero__image">
+            <img
+              src="./pexels-mart-production-7709090.jpg"
+              alt="photo of a customer service representative"
+            />
+          </div>
+          <div class="hero__description">
+            <h1>Get Customer Support in 5 hours</h1>
+            <p
+              >We at Tramango value our customers and we want to give you the
+              best experience you'll ever get on any other platform. Our
+              Customer support is always available 24/7</p
+            >
+            <div class="hero__buttons">
+              <button class="hero__buttons-quote">Start a quote</button>
+              <button class="hero__buttons-support">Get Support</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!--* FAQ -->
+      <aside class="faq-section">
+        <div class="faq-wrapper">
+          <h2 class="section-heading">Frequently Asked Questions</h2>
+          <div class="faq-body">
+            <div class="accordions-cntr">
+              <div class="accordion__item">
+                <div class="accordion__item-header">
+                  <h3>
+                    <span class="accordion__item-header-title">
+                      How do I start my visa application?
+                    </span>
+                    <span
+                      class="accordion__item-header-icon material-symbols-outlined"
+                      >expand_more</span
+                    >
+                  </h3>
+                </div>
+                <div class="accordion__item-content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Pellentesque euismod, urna eu tincidunt consectetur, nisi
+                    nisl aliquam nunc, eget egestas nunc nisl eu nisi.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__item-header">
+                  <h3>
+                    <span class="accordion__item-header-title">
+                      How do I make a tour request?
+                    </span>
+                    <span
+                      class="accordion__item-header-icon material-symbols-outlined"
+                      >expand_more</span
+                    >
+                  </h3>
+                </div>
+                <div class="accordion__item-content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Pellentesque euismod, urna eu tincidunt consectetur, nisi
+                    nisl aliquam nunc, eget egestas nunc nisl eu nisi.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__item-header">
+                  <h3>
+                    <span class="accordion__item-header-title">
+                      I need help with booking, how can I contact you?
+                    </span>
+                    <span
+                      class="accordion__item-header-icon material-symbols-outlined"
+                      >expand_more</span
+                    >
+                  </h3>
+                </div>
+                <div class="accordion__item-content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Pellentesque euismod, urna eu tincidunt consectetur, nisi
+                    nisl aliquam nunc, eget egestas nunc nisl eu nisi.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__item-header">
+                  <h3>
+                    <span class="accordion__item-header-title">
+                      Can i make a reservation or booking by phone or email?
+                    </span>
+                    <span
+                      class="accordion__item-header-icon material-symbols-outlined"
+                      >expand_more</span
+                    >
+                  </h3>
+                </div>
+                <div class="accordion__item-content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Pellentesque euismod, urna eu tincidunt consectetur, nisi
+                    nisl aliquam nunc, eget egestas nunc nisl eu nisi.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script>
+      // * Function for accordion 2
+      // variables
+      const accordionItemToggle = document.querySelectorAll(
+        ".accordion__item-header"
+      );
+
+      // adding event listener to the accordion2 toggle button
+      for (i of accordionItemToggle) {
+        i.addEventListener("click", accordionItemFunction);
+      }
+
+      // here the other bodies do not automatically close then the current one is open
+      function accordionItemFunction() {
+        this.nextElementSibling.classList.toggle("active-accordion");
+        this.children[0].children[1].classList.toggle("toggle-icon");
+      }
+    </script>
+  </body>
+</html>
